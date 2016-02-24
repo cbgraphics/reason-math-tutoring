@@ -1,0 +1,790 @@
+/* 
+Theme Name: One Room School House
+Theme URI: http://wordpress.org/themes/oneroomschoolhouse
+Author: CBGraphics
+Author URI: http://cbgraphics.net
+Description: Custom theme developed for Reason Math Tutoring. Theme reflects the new branding and value proposition of RMT. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive layout, black, white, light, custom menu, featured images, post formats, bootstrap
+Text Domain: oneroomschoolhouse
+
+This theme is the property of Reason Math Tutoring (c) 2015.
+ */
+
+
+/* ----------Table of Contents----------
+1.0 Global
+2.0 Navigation
+
+
+-------------------------------------- */
+
+/* -----------1.0 Global---------- */
+
+@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/bootstrap-responsive.css'); 
+
+/* Primary Container */
+
+
+@media (min-width:768px) {
+	.container {
+    	padding-right: calc(16.6667vh + 5px);
+    	padding-left: calc(16.6667vh + 5px);
+	}
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Code Bold';
+    src: url('fonts/code_bold-webfont.eot');
+    src: url('fonts/code_bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/code_bold-webfont.woff') format('woff'),
+        url('fonts/code_bold-webfont.ttf') format('truetype'),
+        url('fonts/code_bold-webfont.svg#FontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Light-webfont.woff') format('woff'),
+        url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-Light-webfont.svg#FontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-LightItalic-webfont.eot');
+    src: url('fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-LightItalic-webfont.woff') format('woff'),
+        url('fonts/Roboto-LightItalic-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-LightItalic-webfont.svg#FontName') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Medium-webfont.eot');
+    src: url('fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Medium-webfont.woff') format('woff'),
+        url('fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-Medium-webfont.svg#FontName') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-MediumItalic-webfont.eot');
+    src: url('fonts/Roboto-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-MediumItalic-webfont.woff') format('woff'),
+        url('fonts/Roboto-MediumItalic-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-MediumItalic-webfont.svg#FontName') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body { 
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	padding-bottom: 40px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: rgb(65, 64, 66);
+}
+
+h2, h3, h4, h5, h6, p {
+	font-family: "Roboto", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 5.5em;
+  font-family: "Code Bold", "Roboto", Arial, sans-serif;
+  line-height: 1.158;
+  text-transform: uppercase;
+}
+
+h2 {
+	font-size: 4em;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 2.5em;
+	font-weight: normal;
+}
+
+h4 {
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 1em;
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Buttons */
+
+.btn-primary, input[type="submit"] {
+	border: 0;
+	border-radius: 0;
+	font-size: 1.3em !important;
+	font-weight: bold !important;
+	padding: 10px 40px;
+	text-transform: uppercase;
+	margin-top: 25px;
+	display: inline-block;
+}
+
+a.btn-primary, a:link.btn-primary, a:visited.btn-primary, input[type="submit"], input[type="button"] {
+	color: #5b96e8;
+	background-color: #f0f0f0;
+	border: 0 !important;
+}
+
+a:hover.btn-primary, input[type="submit"]:hover, input[type="button"]:hover {
+	color: #ffffff;
+	background-color: #5b96e8;
+}
+
+a.btn-calendar, a:link.btn-calendar, a:visited.btn-calendar, input[type="reset"] {
+	color: #ffffff;
+	background-color: #FF5921;
+}
+
+a:hover.btn-calendar, input[type="reset"]:hover {
+	color: #FF5921;
+	background-color: #F0F0F0;
+}
+
+a.btn-classes, a:link.btn-classes, a:visited.btn-classes {
+	color: #ffffff;
+	background-color: #B2004D;
+}
+
+a:hover.btn-classes {
+	color: #B2004D;
+	background-color: #F0F0F0;
+}
+
+a, a:link, a:visited {
+	color: inherit;
+	text-decoration: underline !important;
+}
+
+a:hover {
+	color: #5b96e8;
+}
+
+/* Spacer */
+
+hr {
+	border: 1px solid;
+	margin: 50px 0;
+}
+
+hr.section-spacer {
+	border: 1px solid;
+	margin: 75px 0;
+}
+
+
+/* Forms */
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #414042;
+}
+
+input[type="email"], input[type="text"], input[type="url"], input[type="number"], input[type="password"],input[type="tel"], input[type="search"],textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	background-color: rgb(236, 236, 236);
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #414042 !important;
+	border-radius: 0;
+	margin: 2px 0 15px 0;
+}
+
+.list-checkbox-wrap > span > ul > li, .list-radio-wrap > span > ul > li {
+	list-style: none;
+	display: inline-block;
+	margin: 0px 25px 2px 0px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 5px 0px 0px;
+}
+
+.ninja-forms-req-symbol {
+	color: #FF5921;
+}
+
+
+/* -----------2.0 Navigation---------- */
+
+.navbar-fixed-right {
+	position: fixed;
+	top: 0px;
+	padding: 0px;
+	z-index: 1030;
+	color: #FFF;
+	right: 0;
+	margin: 0;
+}
+
+.navbar-fixed-right div.container-fluid {
+	height: 100%;
+	width: calc(16.6667vh);
+	padding: 0;
+	margin: 0;
+}
+
+.navbar-fixed-right ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+
+.navbar-fixed-right li {
+	list-style: none;
+	display: block;
+	height: calc(16.6667vh);
+	width: calc(16.6667vh);
+	text-align: center;
+	padding: calc(2vh) 0;
+}
+
+.navbar-default {
+	background-color: none;
+	border: #F0F0F0 solid 1px;
+}
+
+.navbar-brand {
+	display: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+	text-decoration: none !important;
+}
+
+
+.navbar-inner i {
+	padding-bottom: calc(2vh);
+}
+
+.nav-math-tutoring {
+	background-color: #5B96E8;
+
+}
+
+.nav-home-schooling {
+	background-color: #FFC31E;
+}
+
+.nav-test-prep {
+	background-color: #00A639;
+}
+
+.nav-classes {
+	background-color: #B2004D;
+}
+
+.nav-calendar {
+	background-color: #FF5921;
+}
+
+img#header-logo {
+	background-color: #f0f0f0;
+	height: calc(16.6667vh);
+	width: auto;
+	margin: 0 auto;
+	margin-left:auto;
+	padding: 10px calc(3vh);
+}
+
+.navbar-default {
+		background-color: #F0F0F0 !important;
+	}
+
+
+
+
+/* Collapsed */
+.navbar-collapse {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #F0F0F0;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 1px;
+}
+
+.navbar-toggle {
+	background-color: #FFFFFF;
+	margin-right: 25px;
+}
+
+@media (max-width:767px){
+	body {
+		padding-top: 55px;
+	}
+
+	.navbar-fixed-right {
+		width: 100%;
+	}
+
+	.navbar-fixed-right div.container-fluid {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	}
+
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background-color: #f0f0f0;
+	}
+
+
+	.navbar-brand {
+	display: block;
+	padding-left: 25px;
+	}
+
+	a.navbar-brand {
+		font-size: 2em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	img#header-logo {
+    	margin-left: 40%;
+	}
+
+	.navbar-fixed-right li {
+		width: 100%;
+		height: calc(16.6667vh - 10px);
+	}
+}
+
+.under-construction-nav {
+	text-align: center;
+	display: block
+}
+
+/* Footer */
+
+footer {
+	padding: 15px 0;
+	text-align: left !important;
+}
+
+
+
+/* ----------Service Sales Pages---------- */
+
+div.tutoring-rates.col-md-6 {
+	background-color: #F0F0F0;
+	padding: 15px;
+	text-align: center;
+	border: white solid 15px;
+	margin-bottom: 25px;
+}
+
+
+.primary-service-content, .primary-classes-content {
+	margin-bottom: 50px;
+}
+
+#math-tutoring.services-type-page h1#first-header, #math-tutoring.services-type-page ol > li:before {
+	color: #5B96E8;
+}
+
+#math-tutoring.services-type-page div.get-started {
+	margin: 0 -9999rem;
+	/*  add back negative margin value  */
+	padding: 2rem 9999rem;
+	background-color: #5B96E8;
+	color: #FFFFFF !important;
+	text-align: center;
+}
+
+#classes.services-type-page h1#first-headerchild, #classes.services-type-page ol > li:before {
+	color: #B2004D;
+}
+
+#classes.services-type-page div.get-started {
+	margin: 0 -9999rem;
+	/*  add back negative margin value  */
+	padding: 2rem 9999rem;
+	background-color: #B2004D;
+	text-align: center;
+}
+
+#test-prep.services-type-page h1#first-header, #test-prep.services-type-page ol > li:before {
+	color: #00A639;
+}
+
+#test-prep.services-type-page div.get-started {
+	margin: 0 -9999rem;
+	/*  add back negative margin value  */
+	padding: 2rem 9999rem;
+	background-color: #00A639;
+	text-align: center;
+}
+
+#home-school.services-type-page h1#first-header, #home-school.services-type-page ol > li:before {
+	color: #FFC31E;
+}
+
+#home-school.services-type-page div.get-started {
+	margin: 0 -9999rem;
+	/*  add back negative margin value  */
+	padding: 2rem 9999rem;
+	background-color: #FFC31E;
+	text-align: center;
+}
+
+.get-started > h1, .get-started > h2, .get-started > h3, .get-started > h4, .get-started > h5, .get-started > h6, .get-started > p, .get-started > a, .get-started > a:link, .get-started > a:visited {
+	color: #FFFFFF;
+}
+
+.services-type-page > .primary-service-content li::first-line {
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+.services-type-page ol {
+	counter-reset:li; /*  Initiate a counter  */
+    margin-left:0; /*  Remove the default left margin  */
+    padding-left:0; /*  Remove the default left padding  */
+}
+
+.services-type-page ol > li {
+    position:relative; /*  Create a positioning context  */
+    margin:0 0 15px 4em; /*  Give each list item a left margin to make room for the numbers  */
+    padding:4px 8px; /*  Add some spacing around the content  */
+    list-style:none; /*  Disable the normal item numbering  */
+}
+
+.services-type-page ol > li:before {
+    content:counter(li); /*  Use the counter as content  */
+    counter-increment:li; /*  Increment the counter by 1  */
+    /*  Position and style the number  */
+    position:absolute;
+    top: -15px;
+	left: -.75em;
+	margin-right: 8px;
+	padding: 4px;
+	font-weight: bold;
+	font-size: 5em;
+}
+
+.services-type-page li ol, li ul {
+	margin-top:6px;
+}
+
+.services-type-page ol ol li:last-child {
+	margin-bottom: 0;
+}​
+
+.asdfjklp {
+	/* sacrificial style, not sure what the problem is.... */
+}
+
+
+/* Other Services */
+div.other-services.row {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.other-services > .col-md-4 {
+	border: white solid 15px;
+	padding: 70px 0;
+}
+
+
+.other-services h4 {
+	color: #ffffff;
+}
+
+.other-services a {
+	color: #ffffff;
+	text-decoration: none !important;
+}
+
+.other-services a:hover {
+	color: #414042 !important;
+}
+
+/*---------------Events Calendar ----------------------*/
+
+div.tribe-bar-submit {
+	margin-left: 0;
+}
+
+#tribe-bar-form .tribe-bar-submit input[type="submit"]:hover {
+	background-color: #FF5921;
+	border: 0;
+	border-radius: 0;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 10px 40px;
+	text-transform: uppercase;
+
+}
+
+#tribe-events .tribe-events-button, 
+#tribe-events .tribe-events-button:hover, 
+#tribe_events_filters_wrapper input[type="submit"], 
+.tribe-events-button, 
+.tribe-events-button.tribe-active:hover, 
+.tribe-events-button.tribe-inactive, 
+.tribe-events-button:hover, 
+.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], 
+.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] > a,
+#tribe-events .tribe-events-button, .tribe-events-button {
+	background-color: #FF5921 !important;
+	border-radius: 0 !important;
+}
+
+.tribe-events-adv-list-widget .tribe-events-widget-link a, 
+.tribe-events-adv-list-widget .tribe-events-widget-link a:hover, 
+.tribe-events-back a, 
+.tribe-events-back a:hover, 
+.tribe-events-event-meta a, 
+.tribe-events-list-widget .tribe-events-widget-link a, 
+.tribe-events-list-widget .tribe-events-widget-link a:hover, 
+ul.tribe-events-sub-nav a, 
+ul.tribe-events-sub-nav a:hover  {
+	color: #FF5921;
+}
+
+h1.tribe-events-single-event-title.summary.entry-title {
+	color: #FF5921;
+}
+
+.tribe-events-ical {
+	display: block !important;
+	float: left !important;
+}
+
+/* Single Event */
+
+.tribe-events-event-image img {
+    max-width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 500px;
+    margin-right: 50px;
+}
+
+div.tribe-events-single-section {
+	background-color: #F0F0F0;
+	clear: both;
+	display: block;
+	margin: 25px 0;
+}
+
+h3.tribe-events-single-section-title {
+	color: #FF5921;
+	font-family: "Code Bold", "Roboto", Arial, sans-serif;
+	font-size: 25px !important;
+	font-weight: normal !important;
+  	text-transform: uppercase;
+}
+
+.tribe-events-meta-group dt {
+	margin-top: 10px;
+}
+
+.tribe-events-single ul.tribe-related-events .tribe-related-events-thumbnail img {
+	border-radius: 500px !important;
+}
+
+div.tribe-related-event-info {
+	text-align: center;
+	font-size: 17px;
+}
+
+h3.tribe-related-events-title a {
+	font-size: 25px !important;
+	font-weight: bold !important;
+}
+
+.tribe-events-cal-links {
+	display: block;
+	float: left;
+}
+
+a.tribe-events-gcal, a.tribe-events-ical {
+	clear: none !important;
+	margin: 0 25px 25px 0;
+}
+
+.tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group {
+	padding: 15px 4% !important;
+}
+
+
+/* ---- Staff Profiles Front Page ------- */
+
+div.staff-front-page {
+	margin-bottom: 25px;
+}
+
+.staff-front-page > div > img {
+	border-radius: 500px;
+	width: 100%;
+	height: auto;
+}
+
+.staff-front-page > img {
+	border-radius: 500px;
+	width: 50%;
+	height: auto;
+}
+
+.staff-front-page h1 {
+	color: #5b96e8;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 2.1em;
+	font-weight: bold;
+	text-transform: none;
+}
+
+.staff-front-page h2, .events-front-page h1 {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: none;
+	margin-bottom: 0;
+}
+
+/* ------ Events Front Page ------- */
+
+h1.events-front-page-date {
+	color: #FF5921;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 5em;
+	font-weight: bold;
+}
+
+div.events-front-page {
+	margin-bottom: 25px;
+}
+
+
+/* ------- Testimonials ----- */
+
+div.testimonial, div.classes-single-listing {
+	margin: 25px 0;
+}
+
+.testimonial img, .classes-single-listing img {
+	border-radius: 500px;
+	width: 100%;
+	height: auto;
+}
+
+.testimonial p::first-line {
+	color: #5b96e8;
+	font-size: 2.1em;
+	font-weight: bold;
+}
+
+.testimonial h4 {
+	font-size: 1.5em;
+	margin-top: 25px;
+}
+
+
+/* ------ Classes Type Page ------ */
+
+.classes-single-listing {
+	text-align: center;
+	line-height: 1.1em;
+}
+
+.classes-type-page h1#first-header, .classes-single-listing h1 {
+	color: #B2004D;	
+}
+
+.classes-single-listing h1 {
+	font-size: 3.5em;
+	line-height: .8;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.classes-single-listing h3 {
+	margin-top: 0;
+}
+
+.classes-single-listing h6 {
+	font-weight: bold;
+	color: #FF5921;
+	font-size: 1.1em;
+}
+
+.classes-single-listing img {
+	width: 300px;
+	height: auto;
+}
+
+.classes-single-listing-col {
+	margin-bottom: 50px;
+	min-height: 650px;
+}
+
+
+/* ------- Contact Page Type ------ */
+
+.three-column-icon {
+	color: #5b96e8;
+	min-height: 35px;
+}
+
+.three-column-wrapper {
+	margin-bottom: 25px;
+}
+
+.ninja-forms-form-wrap {
+	margin-top: 50px;
+}
